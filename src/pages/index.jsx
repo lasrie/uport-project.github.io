@@ -10,7 +10,7 @@ import Solutions from '../components/Solutions'
 import config from '../../data/SiteConfig'
 import heroImg from '../images/hero-img.svg'
 import backgroundImg from '../images/grey-background.png'
-import greenTick from '../images/Tick.svg'
+import blueTick from '../images/Tick.svg'
 import AutoLinkText from 'react-autolink-text2'
 
 class Index extends React.Component {
@@ -48,39 +48,43 @@ class Index extends React.Component {
                     <ValueProps>
                       <h2>Give your users the sovereignty to manage details about their digital-selves.</h2>
                     </ValueProps>
-                    <div className={'Grid Grid--gutters hero-features'}>
-                      <div className='Grid-cell'>
-                        <h2>Connect Users to Your web3 dApp</h2>
-                        <p>Add full support for uPort by adding a single line of code to your web3 dApp.</p>
-                        <ul>
-                          <li>Onboard new users within minutes</li>
-                          <li>Instantly create a privacy-preserving Ethereum account</li>
-                          <li>Build for both desktop and mobile browsers</li>
-                        </ul>
-                        <div className={`hero-button`}>
-                          <a href='/gettingstarted'>
-                            Connect With Your Users
-                          </a>
-                        </div>
-                      </div>
-                      <div className='Grid-cell'>
-                        <h2>Issue & Request Verified Credentials</h2>
-                        <p>Help your users build their digital identity by issuing Verified Credentials about them or the things they do in your app.</p>
-                        <ul>
-                          <li>Request Ethereum transaction signing with web3</li>
-                          <li>Issue and Request Verified Credentials about your users</li>
-                        </ul>
-                        <div className={`hero-button`}>
-                          <a href='/uport-credentials/index'>
-                            Issue Verified Credentials
-                          </a>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <div className='Grid-cell hero-img-wrap'>
                     <div className={`hero-img`}>
                       <img src={heroImg} />
+                    </div>
+                  </div>
+                </div>
+                <div className={'Grid Grid--gutters hero-features'}>
+                  <div className='Grid-cell'>
+                    <div className="hero-feature">
+                      <h2>Connect Users to Your web3 dApp</h2>
+                      <p>Add full support for uPort by adding a single line of code to your web3 dApp.</p>
+                      <ul>
+                        <li>Onboard new users within minutes</li>
+                        <li>Instantly create a privacy-preserving Ethereum account</li>
+                        <li>Build for both desktop and mobile browsers</li>
+                      </ul>
+                      <div className={`hero-button`}>
+                        <a href='/gettingstarted'>
+                          Connect With Your Users
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='Grid-cell'>
+                    <div className="hero-feature">
+                      <h2>Issue & Request Verified Credentials</h2>
+                      <p>Help your users build their digital identity by issuing Verified Credentials about them or the things they do in your app.</p>
+                      <ul>
+                        <li>Request Ethereum transaction signing with web3</li>
+                        <li>Issue and Request Verified Credentials about your users</li>
+                      </ul>
+                      <div className={`hero-button`}>
+                        <a href='/uport-credentials/index'>
+                          Issue Verified Credentials
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -129,7 +133,6 @@ const Hero = styled.div`
   }
   ul {
      margin-top: 1em;
-     height: 3em;
      font-size: 16px;
      list-style: none;
   }
@@ -145,7 +148,7 @@ const Hero = styled.div`
     position: relative;
     bottom: 2px;
     direction: rtl;
-    background-image: url(${greenTick});
+    background-image: url(${blueTick});
     background-size: contain;
     background-repeat: no-repeat;
   }

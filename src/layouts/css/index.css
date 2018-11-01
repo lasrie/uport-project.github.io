@@ -151,13 +151,15 @@ ul li::before {
 }
 
 /*  START: Hero styles */
+.hero-wrapper .Grid {
+  flex-direction: column;
+}
 h1.hero-title {
     font-family: "Nunito Sans";
     font-size: 64px;
     font-weight: 800;
     line-height: 80px;
     margin-bottom: 25px;
-    white-space: nowrap;
     color: #8986A0;
 }
 
@@ -198,16 +200,20 @@ p.hero-subheading {
     text-decoration:none;
 }
 
+.hero-feature {
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px rgba(139, 139, 139, 0.25);
+  height: 100%;
+  padding: 2em;
+}
 
 .hero-button {
-    width: 240px;
-    margin-top: 40px;
     border-radius: 4px;
     background: linear-gradient(180deg, #7958D8 0%, #5C50CA 100%);
     box-shadow: 0 2px 10px 0 rgba(63,61,75,0.2);
     text-decoration: none;
     display: block;
-    margin-left: 0;
     padding: 20px 20px 20px 20px;
     font-weight: 400;
     border: 2px solid #5c50ca;
@@ -741,10 +747,21 @@ https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints
   p.hero-subheading {
     max-width: 78%;
   }
+  .hero-feature {
+    padding-bottom: 8em;
+    position: relative;
+  }
+  .hero-button {
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+  }
   .building-blocks-wrapper {
     padding: 60px 0;
     max-width: 80vw;
   }
+  .hero-wrapper .Grid,
   .building-blocks-wrapper .Grid {
     flex-direction: row;
   }
