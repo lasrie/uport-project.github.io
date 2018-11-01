@@ -57,7 +57,7 @@ class Index extends React.Component {
                 </div>
                 <div className={'Grid Grid--gutters hero-features'}>
                   <div className='Grid-cell'>
-                    <div className="hero-feature">
+                    <div className='hero-feature'>
                       <h2>Connect Users to Your web3 dApp</h2>
                       <p>Add full support for uPort by adding a single line of code to your web3 dApp.</p>
                       <ul>
@@ -73,7 +73,7 @@ class Index extends React.Component {
                     </div>
                   </div>
                   <div className='Grid-cell'>
-                    <div className="hero-feature">
+                    <div className='hero-feature'>
                       <h2>Issue & Request Verified Credentials</h2>
                       <p>Help your users build their digital identity by issuing Verified Credentials about them or the things they do in your app.</p>
                       <ul>
@@ -112,6 +112,7 @@ const AnnouncementContainer = styled.div`
   align-self: center;
   margin: auto;
   color: #cc0066;
+  padding: 0 10px;
 `
 const IndexHeadContainer = styled.div`
   background: ${props => props.theme.brand};

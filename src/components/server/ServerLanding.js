@@ -50,18 +50,6 @@ export default ServerLanding
 const Container = styled.section`
 .grid {
   overflow: hidden;
-  @media (min-width: 768px) {
-    border-radius: 4px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    max-width: 1137px;
-    // height: 491px;
-  }
-  @media (max-width: 1137px) {
-    margin: 0 2rem;
-  }
   justify-content: space-between;
   margin: auto;
   box-shadow: 0px 0px 20px rgba(139, 139, 139, 0.25);
@@ -69,25 +57,12 @@ const Container = styled.section`
 }
 .left {
   display: none;
-  @media (min-width: 768px) {
-    display: block;
-    background-image: url(${serverImg});
-    background-position: right bottom;
-    background-repeat: no-repeat;
-  }
-  @media (min-width: 1080px) {
-    background-position: left bottom;
-  }
 }
 .right {
 
 }
 .right-wrap {
   margin: 2em;
-  @media (min-width: 768px) {
-    margin: 76px 80px 0 0;
-    // height: 339px;
-  }
 }
 .subgrid {
   display: grid;
@@ -95,7 +70,6 @@ const Container = styled.section`
   grid-template-rows: auto;
   grid-gap: 40px
   justify-content: center;
-  // height: 189px;
   margin-bottom: 2em;
 }
 .subleft {
@@ -170,5 +144,34 @@ a {
   text-align: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .grid {
+    border-radius: 4px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 1137px;
+  }
+  .left {
+    display: block;
+    background-image: url(${serverImg});
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+  .right-wrap {
+    margin: 76px 80px 0 0;
+  }
+}
+@media (max-width: 1137px) {
+  .grid {
+    margin: 0 2rem;
+  }
+}
+@media (min-width: 1137px) {
+  .left {
+    background-position: left bottom;
+  }
 }
 `

@@ -5,11 +5,13 @@ const Container = styled.section`
     background-color: #fff;
     .building-blocks-wrapper {
       margin: 0 auto;
+      padding: 60px 0;
     }
     h2 {
       font-size: 32px;
       font-weight: bold;
       line-height: 40px;
+      text-align: left;
     }
     h3, h4 {
       padding: 20px;
@@ -19,20 +21,17 @@ const Container = styled.section`
     }
     h4 {
       color: #5C50CA;
-      padding: 20px;
+      padding: 0 0 20px;
       margin: 0;
     }
     p {
-      max-width: 90%;
-      padding: 0px 20px 20px 20px
+      padding: 0;
       margin: 0;
     }
     .code-block {
-      display: table;
       border-radius: 4px;
       background-color: #f9f9fa;
-      margin: 0px 20px 21px 20px;
-      width: 390px;
+      margin-top: 20px;
       height: 50px;
       font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
       color: #3db77d;
@@ -44,13 +43,13 @@ const Container = styled.section`
       }
     }
     .block-item {
-      width: 430px;
-      height: 220px;
       box-shadow: 0px 0px 4px
       rgba(0,0,0, 0.25);
       border-radius: 4px;
       margin-bottom: 30px;
       margin-left: 30px;
+      padding: 20px;
+      position: relative;
     }
     a {
         color: inherit;
@@ -60,20 +59,32 @@ const Container = styled.section`
       padding-left: 28px;
     }
 
-   @media screen and (max-width: 600px) {
-    .code-block, .block-item {
-      width: 90%;
-      height: 100%;
+  @media (min-width: 768px) {
+    .code-block {
+      bottom: 20px;
+      left: 20px;
+      margin-top: 0;
+      position: absolute;
+      right: 20px;
     }
     .block-item {
+      min-height: 250px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .block-item {
+      margin-left: 20px;
       padding: 5px;
-      margin-left: 25px;
-      p {
-        max-width: 100%;
-      }
     }
     .building-blocks-wrapper {
-      padding: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    h2 {
+      padding-left: 10px;
+    }
+    .nudge-right {
+      padding-left: 20px;
     }
   }
 `

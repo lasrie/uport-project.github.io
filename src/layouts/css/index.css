@@ -739,6 +739,7 @@ https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints
 @media (min-width: 576px) {
   .building-blocks-wrapper {
     max-width: 80vw;
+    margin: 0 auto;
   }
 }
 
