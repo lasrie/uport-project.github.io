@@ -50,45 +50,59 @@ export default ServerLanding
 const Container = styled.section`
 .grid {
   overflow: hidden;
-  width: 1137px;
-  height: 491px;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
+  @media (min-width: 768px) {
+    border-radius: 4px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 1137px;
+    // height: 491px;
+  }
+  @media (max-width: 1137px) {
+    margin: 0 2rem;
+  }
   justify-content: space-between;
   margin: auto;
-  border-radius: 4px;
   box-shadow: 0px 0px 20px rgba(139, 139, 139, 0.25);
   background: #FFFFFF;
 }
 .left {
-  width: 568.5px;
-  background-image: url(${serverImg});
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    background-image: url(${serverImg});
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: 1080px) {
+    background-position: left bottom;
+  }
 }
 .right {
-  width: 568.5px;
+
 }
 .right-wrap {
-  margin: 76px 80px 0 0;
-  height: 339px;
-  width: 430px;
+  margin: 2em;
+  @media (min-width: 768px) {
+    margin: 76px 80px 0 0;
+    // height: 339px;
+  }
 }
 .subgrid {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto;
   grid-gap: 40px
-  justify-content: center;  
-  height: 189px;
+  justify-content: center;
+  // height: 189px;
+  margin-bottom: 2em;
 }
 .subleft {
-  
+
 }
 .subright {
-  
+
 }
 .border {
   height: 434px;
@@ -147,6 +161,7 @@ a {
  font-size: 14px;
  line-height: 18px;
  color: #3F3D4B;
+ grid-area: 2 / 1 / 3 / 3;
 }
 .link::after {
   content: url(${arrowImg});
