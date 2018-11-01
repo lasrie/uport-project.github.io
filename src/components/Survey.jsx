@@ -65,7 +65,10 @@ const HR = styled.hr`
 `
 
 const H5 = styled.h5`
-  margin: auto;
+  margin-bottom: 10px;
+  @media (min-width: 768px) {
+    margin: auto;
+  }
   padding-right: 10px;
 `
 
@@ -75,20 +78,23 @@ const Input = styled.input`
 `
 
 const Label = styled.label`
-  padding-left: 5px;
-  padding-right: 10px;
+  padding: 10px;
   margin: auto;
+  @media (min-width: 768px) {
+    padding: 0 5px;
+  }
 `
 
 const Row = styled.div`
-  display: flex;
-  flex-direction: row;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
   max-width: 25rem;
 `
 
 const Column = styled.div`
   margin: auto;
-  padding-left: 20px;
 `
 
 const SurveyContainer = styled.div`
