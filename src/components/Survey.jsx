@@ -30,23 +30,24 @@ class DevSurvey extends Component {
   render() {
     return(
       <SurveyContainer>
-        <form>
+        <Form>
+          <HR />
           <Row>
             <H5>Was this article helpful?</H5>
             <Column>
-              <Input type='radio' value='true' name='survey' onChange={this.handleChange} />
               <Label>
+                <Input type='radio' value='true' name='survey' onChange={this.handleChange} />
                 Yes
               </Label>
             </Column>
             <Column>
-              <Input type='radio' value='false' name='survey' onChange={this.handleChange} />
               <Label>
+                <Input type='radio' value='false' name='survey' onChange={this.handleChange} />
                 No
               </Label>
             </Column>
           </Row>
-        </form>
+        </Form>
       </SurveyContainer>
     )
   }
@@ -54,13 +55,22 @@ class DevSurvey extends Component {
 
 export default DevSurvey
 
+const Form = styled.form`
+  width: 100%;
+`
+
+const HR = styled.hr`
+  background-color: rgb(229, 229, 229);
+  height: 1px;
+`
+
 const H5 = styled.h5`
   margin: auto;
   padding-right: 10px;
 `
 
 const Input = styled.input`
-  margin: auto;
+  margin: 0 10px 0 0;
   padding-left: 5px;
 `
 
@@ -73,18 +83,17 @@ const Label = styled.label`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  margin: auto;
+  max-width: 25rem;
 `
 
 const Column = styled.div`
   margin: auto;
-  display: flex;
   padding-left: 20px;
 `
 
 const SurveyContainer = styled.div`
+  padding-bottom: 20px;
   padding-top: 20px;
   display: flex;
   margin: auto;
-  color: #5c50ca;
 `
